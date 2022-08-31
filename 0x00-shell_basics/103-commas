@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -mapI --sort=WORD . ..\n
+ls -mapI --sort=WORD  .  \n
