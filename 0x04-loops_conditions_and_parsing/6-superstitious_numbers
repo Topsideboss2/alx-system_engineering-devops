@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# A Bash script that displays numbers from 1 to 20 and after 4 = 'bad luck from China', after 9 = 'bad luck from Japan' and after 17 = 'bad luck from Italy'
+
+n=0
+
+while (( n <= 19 ))
+do
+  ((n++))
+  case $n in
+   "4") echo -e "$n\nbad luck from China";;
+   "9") echo -e "$n\nbad luck from Japan";;
+   "17") echo -e "$n\nbad luck from Italy";;
+   *) echo $n;;
+  esac
+done
