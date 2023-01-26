@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A bash script that says "Best School" ten times using while loopi
+k=1
+while (( k <= 10 ))
+do
+	echo "Best School"
+	k=$(( k+1 ))
+done
