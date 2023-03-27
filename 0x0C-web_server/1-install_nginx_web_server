@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Write a basj script that configures a new Ubuntu machine that:
+# installs nginx
+# listen on port 80
+
+sudo apt-get update -y
+sudo apt-get install nginx -y
+sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
+sudo chmod -R 755 /var/www
+sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo ufw allow 'NginX HTTP'
+sudo service nginx start
