@@ -20,4 +20,4 @@ redirection=\
 }"
 
 sudo echo -e "$redirection" > /etc/nginx/sites-available/default
-sudo service nginx restart
+sudo service nginx start
