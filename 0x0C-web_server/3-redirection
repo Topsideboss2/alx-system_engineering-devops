@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Script that installs Nginx server and redirects /redirect_me
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
+sudo chown -R "$USER":"$USER" /etc/nginx/sites-available/default
+
+sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+redirection=\
+"server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	root /var/www/html;
+	index index.html index.htm index.nginx-debian.html;
+	server_name _;
+	location /redirect_me {
+		return 301 https://github.com/;
+	}
+}"
+
+sudo echo -e "$redirection" > /etc/nginx/sites-available/default
+sudo service nginx restart
