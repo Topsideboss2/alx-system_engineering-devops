@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A script that debugs Ubuntu container's Nginx installation
+
+sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
+service nginx restart
