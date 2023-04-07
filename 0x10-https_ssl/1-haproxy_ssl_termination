@@ -34,18 +34,17 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
-        option forwardfor
-        option http-server-close
+
 
 frontend http
         bind *:80
-        mode http
+        bind *:443 ssl crt /etc/haproxy/certs/www.topsideboss2.tech.pem
         default_backend web-backend
 
 frontend www-https
-   bind *:443 ssl crt /etc/haproxy/certs/www.topsideboss2.tech.pem
-   http-request set-header X-Forwarded-Proto https
-   default_backend web-backend
+        bind *:443 ssl crt /etc/haproxy/certs/www.topsideboss2.tech.pem
+        http-request set-header X-Forwarded-Proto https
+        default_backend web-backend
 
 backend web-backend
         balance roundrobin
