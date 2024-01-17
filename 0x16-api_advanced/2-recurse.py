@@ -3,7 +3,6 @@
 """ Module that queries the Reddit API """
 
 import requests
-import sys
 
 def recurse(subreddit, hot_list=[]):
     """ Function that queries the Reddit API and returns a list containing
