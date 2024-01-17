@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-""" Script that uses JSONPlaceholder to return information 
+""" Script that uses JSONPlaceholder to return information
     about his/her TODO list progress
     Requirements:
     You must use urllib or requests module
