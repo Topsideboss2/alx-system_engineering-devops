@@ -6,7 +6,7 @@
         You must use urllib or requests module
         The script must export data in the JSON format
         """
-        
+
 import json
 import requests
 
