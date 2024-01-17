@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-# Script that uses JSONPlaceholder to return information about his/her TODO list progress
-# Requirements:
-# You must use urllib or requests module
-# The script must accept an integer as a parameter, which is the employee ID
-# The script must display on the standard output the employee TODO list progress in this exact format:
 
 
+""" Script that uses JSONPlaceholder to return information about his/her TODO list progress
+    Requirements:
+    You must use urllib or requests module
+    The script must accept an integer as a parameter, which is the employee ID
+    """
 import requests
 import sys
 
