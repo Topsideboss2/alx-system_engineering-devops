@@ -1,6 +1,6 @@
 # Fixed wrong extension in wp-settings.php
 
-exec('fix-wp':
-  command => 'sed -i "s/\.phpp/\.php/g" /var/www/html/wp-settings.php',
-  path    => ['/usr/local/bin/', '/bin/'],
-)
+exec{'fix-wp':
+  provider => 'shell',
+  command  => 'sed -i "s/\.phpp/\.php/g" /var/www/html/wp-settings.php',
+}
