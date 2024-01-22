@@ -1,5 +1,7 @@
 # **Title: Postmortem - Learning from a Critical Outage**
 
+![Birdbox image](./_docs/Birdbox.png)
+
 **Issue Summary:**
 - **Duration:** 
   - Start Time: 2024-01-22 15:30 UTC
